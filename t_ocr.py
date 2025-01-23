@@ -38,7 +38,6 @@ def main(inputs):
             "bbox": [b[0][0], b[0][1], b[1][0], b[-1][1]],
             "type": "ocr",
             "score": 1} for b, t in bxs if b[0][0] <= b[1][0] and b[0][1] <= b[-1][1]]
-        print(inputs[i])
         print("\n".join([o["text"] for o in bxs]))
 
 
